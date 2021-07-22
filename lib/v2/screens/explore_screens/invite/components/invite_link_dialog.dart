@@ -19,8 +19,8 @@ class InviteLinkDialog extends StatelessWidget {
       builder: (context, state) {
         return WillPopScope(
           onWillPop: () async {
-            Navigator.of(context).pop(true);
-            Navigator.of(context).pop(true);
+            Navigator.of(context).pop();
+            Navigator.of(context).pop();
             return true;
           },
           child: Center(
@@ -64,8 +64,8 @@ class InviteLinkDialog extends StatelessWidget {
                 rightButtonTitle: 'Share'.i18n,
                 leftButtonTitle: state.showCloseDialogButton ? 'Close'.i18n : '',
                 onLeftButtonPressed: () {
-                  Navigator.of(context).pop(true);
-                  Navigator.of(context).pop(true);
+                  Navigator.of(context).pop();
+                  Navigator.of(context).pop();
                 },
                 onRightButtonPressed: () {
                   BlocProvider.of<InviteBloc>(context).add(const OnShareInviteLinkButtonPressed());

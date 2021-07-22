@@ -139,9 +139,6 @@ flutter:
     - assets/images/navigation_bar/explore_selected.svg
     - assets/images/navigation_bar/wallet_selected.svg
     - assets/images/navigation_bar/user_profile_selected.svg
-    - assets/images/explore/person_send_invite.svg
-    - assets/images/explore/plant_seed.svg
-    - assets/images/explore/thumb_up.svg
     - assets/images/explore/hypha_dho_card.jpg
     - assets/images/explore/get_seeds_card.jpg
     - assets/images/wallet/arrow_up.svg
