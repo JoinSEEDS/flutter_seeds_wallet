@@ -56,7 +56,7 @@ abstract class EosRepository {
   }
 
   EOSClient buildEosClient() => EOSClient(remoteConfigurations.activeEOSServerUrl.url!, 'v1',
-      privateKeys: [settingsStorage.privateKey!, cpuPrivateKey]);
+      privateKeys: [settingsStorage.privateKey ?? onboardingPrivateKey, cpuPrivateKey]);
 
   Result mapEosResponse(dynamic response, Function modelMapper) {
     print('mapEosResponse - transaction id: ${response['transaction_id']}');
