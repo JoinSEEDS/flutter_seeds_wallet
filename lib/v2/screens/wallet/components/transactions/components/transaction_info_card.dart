@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:seeds/v2/constants/app_colors.dart';
 import 'package:seeds/utils/string_extension.dart';
 import 'package:seeds/v2/screens/wallet/components/transactions/interactor/viewmodels/member_bloc.dart';
@@ -67,13 +66,11 @@ class TransactionInfoCard extends StatelessWidget {
                                   maxLines: 1,
                                 )),
                                 const SizedBox(width: 40),
-                                Text(amount.seedsFormatted, style: Theme.of(context).textTheme.button),
+                                incoming
+                                    ? Text('+', style: Theme.of(context).textTheme.subtitle1Green1)
+                                    : Text('-', style: Theme.of(context).textTheme.subtitle1Red2),
                                 const SizedBox(width: 4),
-                                SvgPicture.asset(
-                                    incoming
-                                        ? 'assets/images/wallet/arrow_up.svg'
-                                        : 'assets/images/wallet/arrow_down.svg',
-                                    height: 16)
+                                Text(amount.seedsFormatted, style: Theme.of(context).textTheme.button),
                               ],
                             ),
                             const SizedBox(height: 10),

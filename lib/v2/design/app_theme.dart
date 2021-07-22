@@ -220,6 +220,11 @@ extension CustomStyles on TextTheme {
 
   TextStyle get headline7Green =>
       headline7.copyWith(fontSize: 22, fontWeight: FontWeight.w500, color: AppColors.green3);
+
+  TextStyle get subtitle1Green1 =>
+      subtitle1!.copyWith(fontSize: 18, fontWeight: FontWeight.w500, letterSpacing: 2, color: AppColors.green1);
+
+  TextStyle get subtitle1Red2 => subtitle1Green1.copyWith(color: AppColors.red1);
 }
 
 class SeedsInputDecorationTheme {
